@@ -1,6 +1,7 @@
 package com.techreturners.cats;
+import com.techreturners.Animal;
 
-abstract class Cat {
+abstract class Cat implements Animal{
     protected int height;
     protected boolean sleepMode;
     protected String setting;
