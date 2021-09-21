@@ -4,9 +4,7 @@ import java.util.Random;
 class DomesticCat extends Cat{
 
     public DomesticCat(){
-        super.setHeight(23);
-        super.setSetting("domestic");
-        super.setSleepMode(false);
+        super(23, false, "domestic");
     }
 
     public String eat(){

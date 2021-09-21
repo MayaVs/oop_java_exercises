@@ -6,25 +6,18 @@ abstract class Cat implements Animal{
     protected boolean sleepMode;
     protected String setting;
 
-    public Cat(){}
+    public Cat(int height, boolean sleepMode, String setting){
+        this.height = height;
+        this.sleepMode = sleepMode;
+        this.setting = setting;
+    }
 
     public abstract String eat();
     public void sleep(){}
     public void run(){}
 
-    public void setHeight(int height){
-        this.height = height;
-    }
     public int getAverageHeight(){
         return this.height;
-    }
-
-    public void setSleepMode(boolean sleepMode){
-        this.sleepMode = sleepMode;
-    }
-
-    public void setSetting(String setting){
-        this.setting = setting;
     }
 
     public String getSetting(){

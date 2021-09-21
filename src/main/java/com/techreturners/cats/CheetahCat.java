@@ -3,9 +3,7 @@ package com.techreturners.cats;
 public class CheetahCat extends Cat{
 
     public CheetahCat(){
-        super.setHeight(1100);
-        super.setSetting("wild");
-        super.setSleepMode(false);
+        super(1100, false, "wild");
     }
 
     public String eat(){
