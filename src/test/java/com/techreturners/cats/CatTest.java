@@ -1,6 +1,7 @@
 package com.techreturners.cats;
 
 import org.junit.Test;
+import com.techreturners.testhelper.*;
 
 import static org.junit.Assert.*;
 
@@ -59,10 +60,23 @@ public class CatTest {
     }
 
     @Test
-    public void feedTheCat() {
-        Cat domesticCat = new DomesticCat();
+    public void feedTheCatOdd() {
+        DomesticCat domesticCat = new DomesticCat();
+        StubRandom stub = new StubRandom(5);
+        domesticCat.setRandom(stub);
+
         String reply = domesticCat.eat();
-        assertTrue(reply.equals("Purrrrrrr") || reply.equals("Purrrrrrr\n" +
-                "It will do I suppose"));
+        assertEquals("Purrrrrrr", reply);
+    }
+
+    @Test
+    public void feedTheCatEven() {
+        DomesticCat domesticCat = new DomesticCat();
+        StubRandom stub = new StubRandom(6);
+        domesticCat.setRandom(stub);
+
+        String reply = domesticCat.eat();
+        assertEquals("Purrrrrrr\n" +
+                "It will do I suppose", reply);
     }
 }
